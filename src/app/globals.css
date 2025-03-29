@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: black;
+}
+
+.mb-100 {
+    margin-bottom: 100rem;
+  }
+
+.scroll-container {
+overflow-y: auto;
+scrollbar-width: none; /* Firefox */
+}
+
+.scroll-container::-webkit-scrollbar {
+display: none; /* Chrome, Safari, Opera */
+}
