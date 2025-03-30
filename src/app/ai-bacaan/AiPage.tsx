@@ -64,7 +64,7 @@ export default function AiPage() {
 
   return (
     <div className="w-full min-h-screen bg-black text-white flex flex-col items-center px-4 sm:px-6 md:px-8 py-4 relative">
-      <Typography color="blue-gray" className="text-center text-[30px] lg:text-[48px] font-bold !text-white/70">
+      <Typography variant="small" color="gray" className="text-center text-[30px] lg:text-[48px] font-bold !text-white/70">
         Ai-Bacaan
       </Typography>
 

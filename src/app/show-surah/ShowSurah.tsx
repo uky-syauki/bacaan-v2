@@ -39,7 +39,7 @@ export default function ShowSurah({ surah }: ShowSurahProps) {
       </Head>
 
       <Typography color="blue-gray" className="w-full text-center text-[28px] sm:text-[36px] md:text-[48px] font-bold leading-tight max-w-screen-lg !text-white/80 mt-12">
-        {surahData.id_surah}: {surahData.nama_surah} (1-{surahData.jumlah_ayat})
+        {surahData.nama_surah} ({surahData.id_surah}:1-{surahData.jumlah_ayat})
       </Typography>
 
       <div className="mt-8 max-w-screen-lg text-justify space-y-4">
