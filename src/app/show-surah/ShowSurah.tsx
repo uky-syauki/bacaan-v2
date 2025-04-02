@@ -13,7 +13,7 @@ export default function ShowSurah({ surah }: ShowSurahProps) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:5000/api/get-surah/${surah}`)
+    fetch(`https://bacaan114.pythonanywhere.com/api/get-surah/${surah}`)
       .then(response => {
         if (!response.ok) {
           throw new Error('Jaringan bermasalah!');
@@ -43,12 +43,23 @@ export default function ShowSurah({ surah }: ShowSurahProps) {
       </Typography>
 
       <div className="mt-8 max-w-screen-lg text-justify space-y-4">
+        <Typography variant="lead" className="w-full text-white/70 text-justify">
+          {Object.entries(surahData.ayat).map(([key, value]) => (
+            <span key={key}>
+              <sup><strong className="text-white">{key}.</strong></sup> {value ? value : ''}
+            </span>
+          ))}
+        </Typography>
+      </div>
+
+          {/* susun baris perbaris */}
+      {/* <div className="mt-8 max-w-screen-lg text-justify space-y-4">
         {Object.entries(surahData.ayat).map(([key, value]) => (
-          <Typography key={key} variant="lead" className="w-full text-white/70 text-left">
+          <Typography variant="lead" className="w-full text-white/70 text-left">
             <strong className="text-white">{key}.</strong> {value ? value : ''}
           </Typography>
         ))}
-      </div>
+      </div> */}
 
       <div className="mt-20 flex flex-wrap justify-center gap-2">
         {surahData.rekomendasi.map((item, index) => (

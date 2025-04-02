@@ -15,7 +15,7 @@ export function FixedPlugin() {
           height={128}
           className="w-5 h-5"
           alt="Bacaan"
-          src="https://www.material-tailwind.com/favicon.png"
+          src="#"
         />{" "}
         Made With Bacaan
       </Button>

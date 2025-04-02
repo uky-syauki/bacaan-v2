@@ -10,7 +10,7 @@ export function MenuSurah() {
   useEffect(() => {
     const fetchNama = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/nama-surah");
+        const response = await fetch("https://bacaan114.pythonanywhere.com/api/nama-surah");
         if (!response.ok) {
           throw new Error("Gagal mengambil data");
         }

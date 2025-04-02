@@ -2,32 +2,42 @@ import React from "react";
 import {
   Navbar as MTNavbar,
   Collapse,
-  Button,
   IconButton,
   Typography,
 } from "@material-tailwind/react";
 import {
-  RectangleStackIcon,
-  UserCircleIcon,
-  CommandLineIcon,
   XMarkIcon,
   Bars3Icon,
+  EnvelopeIcon,
 } from "@heroicons/react/24/solid";
 
 const NAV_MENU = [
+  // {
+  //   name: "Kontak",
+  //   icon: RectangleStackIcon,
+  // },
+  // {
+  //   name: "Kontak",
+  //   icon: PhoneIcon,
+  // },
   {
-    name: "Page",
-    icon: RectangleStackIcon,
+    name: "Kontak",
+    icon: EnvelopeIcon,
+    href: "/kontak",
   },
-  {
-    name: "Account",
-    icon: UserCircleIcon,
-  },
-  {
-    name: "Docs",
-    icon: CommandLineIcon,
-    href: "#",
-  },
+  // {
+  //   name: "Kontak",
+  //   icon: ChatBubbleLeftEllipsisIcon,
+  // },
+  // {
+  //   name: "Account",
+  //   icon: UserCircleIcon,
+  // },
+  // {
+  //   name: "Docs",
+  //   icon: CommandLineIcon,
+  //   href: "#",
+  // },
 ];
 
 interface NavItemProps {
@@ -69,7 +79,7 @@ export function Navbar() {
       <div className="container mx-auto flex items-center justify-between">
         <Typography
           as="a"
-          href="#"
+          href="/"
           color="gray"
           className="text-lg font-bold"
         >
@@ -83,12 +93,12 @@ export function Navbar() {
             </NavItem>
           ))}
         </ul>
-        <div className="hidden items-center gap-2 lg:flex">
+        {/* <div className="hidden items-center gap-2 lg:flex">
           <Button variant="text">Sign In</Button>
           <a href="#" target="_blank">
             <Button color="gray">blocks</Button>
           </a>
-        </div>
+        </div> */}
         <IconButton
           variant="text"
           color="gray"
@@ -112,12 +122,12 @@ export function Navbar() {
               </NavItem>
             ))}
           </ul>
-          <div className="mt-6 mb-4 flex items-center gap-2">
+          {/* <div className="mt-6 mb-4 flex items-center gap-2">
             <Button variant="text">Sign In</Button>
             <a href="#" target="_blank">
               <Button color="gray">blocks</Button>
             </a>
-          </div>
+          </div> */}
         </div>
       </Collapse>
     </MTNavbar>
