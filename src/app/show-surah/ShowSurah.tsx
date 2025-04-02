@@ -38,18 +38,18 @@ export default function ShowSurah({ surah }: ShowSurahProps) {
         <title>{surahData.nama_surah ? `${surahData.nama_surah} - Bacaan` : 'Bacaan'}</title>
       </Head>
 
-      <Typography color="blue-gray" className="w-full text-center text-[28px] sm:text-[36px] md:text-[48px] font-bold leading-tight max-w-screen-lg !text-white/80 mt-12">
+      <h1 className="w-full text-center text-[28px] sm:text-[36px] md:text-[48px] font-bold leading-tight max-w-screen-lg text-white/80 mt-12 text-blue-gray-500">
         {surahData.nama_surah} ({surahData.id_surah}:1-{surahData.jumlah_ayat})
-      </Typography>
+      </h1>
 
       <div className="mt-8 max-w-screen-lg text-justify space-y-4">
-        <Typography variant="lead" className="w-full text-white/70 text-justify">
+        <p className="w-full text-white/70 text-justify text-xl">
           {Object.entries(surahData.ayat).map(([key, value]) => (
             <span key={key}>
-              <sup><strong className="text-white">{key}.</strong></sup> {value ? value : ''}
+              <sup><strong className="text-white">{key}.</strong></sup> {String(value)}
             </span>
           ))}
-        </Typography>
+        </p>
       </div>
 
           {/* susun baris perbaris */}
@@ -63,9 +63,9 @@ export default function ShowSurah({ surah }: ShowSurahProps) {
 
       <div className="mt-20 flex flex-wrap justify-center gap-2">
         {surahData.rekomendasi.map((item, index) => (
-          <Link key={index} href={`/show-surah/${item.toLowerCase()}`} passHref>
+          <Link key={index} href={`/show-surah/${String(item).toLowerCase()}`} passHref>
             <button key={index} className="px-4 py-2 bg-gray-900 rounded-md text-white text-sm sm:text-base hover:bg-gray-600 transition">
-              {item.toUpperCase()}
+              {String(item).toUpperCase()}
             </button>
           </Link>
         ))}

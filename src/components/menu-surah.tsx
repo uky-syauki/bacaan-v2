@@ -30,11 +30,13 @@ export function MenuSurah() {
       <div className="flex place-items-center justify-center">
         <div className="mt-8 mx-auto flex flex-wrap gap-2 justify-center">
           {namaSurah.map((item, index) => (
-            <Button key={index} className="mb-2 min-w-52" color="gray">
-              <Link key={index} href={`/show-surah/${item}`} passHref>
-                {index+1}. {item}
-              </Link>
-            </Button>
+            <Link 
+              key={index} 
+              href={`/show-surah/${item}`} 
+              className="mb-2 min-w-52 px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-600 transition-colors duration-200 text-center"
+            >
+              {index+1}. {item}
+            </Link>
           ))}
         </div>
       </div>

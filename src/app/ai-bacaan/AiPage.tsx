@@ -64,20 +64,20 @@ export default function AiPage() {
 
   return (
     <div className="w-full min-h-screen bg-black text-white flex flex-col items-center px-4 sm:px-6 md:px-8 py-4 relative">
-      <Typography variant="small" color="gray" className="text-center text-[30px] lg:text-[48px] font-bold !text-white/70">
+      <h2 className="text-center text-[30px] lg:text-[48px] font-bold !text-white/70 text-gray-500">
         Ai-Bacaan
-      </Typography>
+      </h2>
 
       <div className="flex items-center gap-1">
-          <Typography variant="small" className="font-normal text-gray-700">
-            Menggunakan model dari{" "}
-            <a href="https://gemini.google.com/app" className="hover:text-gray-900 transition-colors underline">
-              Gemini2.0
-            </a>
-          </Typography>
-        </div>
+        <small className="font-normal text-gray-700 text-sm">
+          Menggunakan model dari{" "}
+          <a href="https://gemini.google.com/app" className="hover:text-gray-900 transition-colors underline">
+            Gemini2.0
+          </a>
+        </small>
+      </div>
 
-      <div ref={chatContainerRef} className="w-full max-w-2xl flex flex-col gap-2 mt-6 mb-6 p-4 !bg-black rounded-lg h-[500px] scroll-container">
+      <div ref={chatContainerRef} className="w-full max-w-2xl flex flex-col gap-2 mt-6 mb-6 p-4 !bg-black rounded-lg h-[820px] scroll-container">
         {messages.map((msg, index) => (
           <div key={index} className={`p-3 rounded-lg max-w-[75%] ${msg.sender === "user" ? "bg-blue-600 self-end" : "bg-gray-900 self-start mb-10"}`}>
             {msg.text}
