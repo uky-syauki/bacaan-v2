@@ -33,7 +33,7 @@ export default function ShowSurah({ surah }: ShowSurahProps) {
   if (!surahData || !surahData.ayat) return <p className="text-center text-red-500 !mt-50">Data tidak tersedia.</p>;
 
   return (
-    <div className="w-full min-h-screen bg-black text-white flex flex-col items-center px-4 sm:px-6 md:px-8">
+    <div className="w-full p-8 min-h-screen bg-black text-white flex flex-col items-center px-4 sm:px-6 md:px-8">
       <Head>
         <title>{surahData.nama_surah ? `${surahData.nama_surah} - Bacaan` : 'Bacaan'}</title>
       </Head>
@@ -42,7 +42,7 @@ export default function ShowSurah({ surah }: ShowSurahProps) {
         {surahData.nama_surah} ({surahData.id_surah}:1-{surahData.jumlah_ayat})
       </h1>
 
-      <div className="mt-8 max-w-screen-lg text-justify space-y-4">
+      <div className="mt-8 p-8 max-w-screen-lg text-justify space-y-4">
         <p className="w-full text-white/70 text-justify text-xl">
           {Object.entries(surahData.ayat).map(([key, value]) => (
             <span key={key}>
