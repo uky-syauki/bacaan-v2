@@ -1,11 +1,5 @@
 import React from "react";
 import {
-  Navbar as MTNavbar,
-  Collapse,
-  IconButton,
-  Typography,
-} from "@material-tailwind/react";
-import {
   XMarkIcon,
   Bars3Icon,
   EnvelopeIcon,
@@ -52,7 +46,7 @@ function NavItem({ children, href }: NavItemProps) {
         href={href || "#"}
         target={href ? "_blank" : "_self"}
         rel={href ? "noopener noreferrer" : undefined}
-        className="flex items-center gap-2 font-medium text-gray-700 text-base hover:text-gray-900 transition-colors"
+        className="flex items-center gap-2 font-medium text-gray-600 bg-black text-base hover:text-gray-900 transition-colors"
       >
         {children}
       </a>
@@ -74,8 +68,8 @@ export function Navbar() {
 
   return (
     <nav className="border-0 sticky top-0 z-50 bg-black w-full shadow-none">
-  <div className="container mx-auto flex items-center justify-between">
-    <a href="/" className="text-lg font-bold text-gray-500">
+  <div className="container mx-auto flex items-center justify-between p-8">
+    <a href="/" className="text-xl font-bold text-gray-500">
       Bacaan
     </a>
     <ul className="ml-10 hidden items-center gap-8 lg:flex bg-gray-500">
