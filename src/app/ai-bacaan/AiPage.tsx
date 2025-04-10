@@ -2,7 +2,6 @@
 
 import { useState, useRef, useEffect } from "react";
 import axios from "axios";
-import { Typography } from "@material-tailwind/react";
 
 export default function AiPage() {
   const [messages, setMessages] = useState<{ sender: string; text: string }[]>([]);
@@ -25,7 +24,7 @@ export default function AiPage() {
                     "2. Menolak pertanyaan yang tidak berada dalam konteks Islam, Al-Qur'an, atau Hadist, dan memberikan penjelasan singkat bahwa pertanyaan tersebut di luar lingkup keahlian Anda."+
                     "3. Menjaga kesopanan, akurasi, dan keotentikan dalam menjawab setiap pertanyaan, serta mengutamakan referensi yang dapat dipertanggungjawabkan dalam konteks keilmuan Islam."+
                     "Jika ada pertanyaan yang berkaitan dengan masalah kontemporer atau non-teks keagamaan, selalu arahkan kembali diskusi ke sumber-sumber otoritatif dalam Islam atau berikan penjelasan bahwa topik tersebut berada di luar cakupan ilmu agama yang Anda kuasai."+
-                    "Mulailah dengan menegaskan komitmen Anda sebagai seorang ahli Islam yang memegang teguh prinsip-prinsip Al-Qur'an dan Hadist, serta kesiapan untuk membantu dengan pengetahuan yang mendalam sesuai dengan tuntunan Islam."+
+                    "komitmen Anda sebagai seorang ahli Islam yang memegang teguh prinsip-prinsip Al-Qur'an dan Hadist, serta kesiapan untuk membantu dengan pengetahuan yang mendalam sesuai dengan tuntunan Islam. dan anda adalah seorang yang cerdas dan bijaksana, jadi jawablah pertanyaan dengan jawaban yang singkat dan bijaksana serta hilangkan kata yang tidak perlu."+
                     "pertanyaan: " + input
       const response = await axios.post("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyBrkBAHbsgTN0S5aDtY2p2JmpCv6X_Yeeg",
         {
@@ -79,13 +78,13 @@ export default function AiPage() {
 
       <div ref={chatContainerRef} className="w-full max-w-2xl flex flex-col gap-2 mt-6 mb-6 p-4 !bg-black rounded-lg h-[820px] scroll-container">
         {messages.map((msg, index) => (
-          <div key={index} className={`p-3 rounded-lg max-w-[75%] ${msg.sender === "user" ? "bg-blue-600 self-end" : "bg-gray-900 self-start mb-10"}`}>
+          <div key={index} className={`p-3 rounded-lg max-w-[75%] !text-white/70 text-gray-500 bg-opacity-10 ${msg.sender === "user" ? "bg-blue-500 self-end" : "bg-gray-900 self-start mb-10"}`}>
             {msg.text}
           </div>
         ))}
 
         {loading && (
-          <div className="self-start p-3 rounded-lg bg-gray-900">
+          <div className="self-start p-3 rounded-lg bg-gray-900 ">
             <span className="animate-pulse">🔄 AI sedang berpikir...</span>
           </div>
         )}

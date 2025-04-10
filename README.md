@@ -1,5 +1,5 @@
-# Bacaan - Qur'an Terjemahan Indonesia
+# Bacaan
 
-<p>Api URL: https://bacaan114.pythonanywhere.com/api</p>
+<p>Api URL: https://bacaan114.pythonanywhere.com api</p>
 
 <p>Web URL: https://bacaan-v2.vercel.app</p>

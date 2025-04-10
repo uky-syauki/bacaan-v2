@@ -3,35 +3,20 @@ import {
   XMarkIcon,
   Bars3Icon,
   EnvelopeIcon,
+  MagnifyingGlassIcon,
 } from "@heroicons/react/24/solid";
 
 const NAV_MENU = [
-  // {
-  //   name: "Kontak",
-  //   icon: RectangleStackIcon,
-  // },
-  // {
-  //   name: "Kontak",
-  //   icon: PhoneIcon,
-  // },
+  {
+    name: "Pencarian",
+    icon: MagnifyingGlassIcon,
+    href: "/cari-ayat",
+  },
   {
     name: "Kontak",
     icon: EnvelopeIcon,
     href: "/kontak",
   },
-  // {
-  //   name: "Kontak",
-  //   icon: ChatBubbleLeftEllipsisIcon,
-  // },
-  // {
-  //   name: "Account",
-  //   icon: UserCircleIcon,
-  // },
-  // {
-  //   name: "Docs",
-  //   icon: CommandLineIcon,
-  //   href: "#",
-  // },
 ];
 
 interface NavItemProps {
@@ -72,7 +57,7 @@ export function Navbar() {
     <a href="/" className="text-xl font-bold text-gray-500">
       Bacaan
     </a>
-    <ul className="ml-10 hidden items-center gap-8 lg:flex bg-gray-500">
+    <ul className="ml-10 hidden items-center gap-8 lg:flex">
       {NAV_MENU.map(({ name, icon: Icon, href }) => (
         <NavItem key={name} href={href}>
           <Icon className="h-5 w-5" />

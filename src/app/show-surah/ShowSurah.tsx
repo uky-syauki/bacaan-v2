@@ -52,15 +52,6 @@ export default function ShowSurah({ surah }: ShowSurahProps) {
         </p>
       </div>
 
-          {/* susun baris perbaris */}
-      {/* <div className="mt-8 max-w-screen-lg text-justify space-y-4">
-        {Object.entries(surahData.ayat).map(([key, value]) => (
-          <Typography variant="lead" className="w-full text-white/70 text-left">
-            <strong className="text-white">{key}.</strong> {value ? value : ''}
-          </Typography>
-        ))}
-      </div> */}
-
       <div className="mt-20 flex flex-wrap justify-center gap-2">
         {surahData.rekomendasi.map((item, index) => (
           <Link key={index} href={`/show-surah/${String(item).toLowerCase()}`} passHref>
